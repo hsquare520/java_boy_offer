@@ -21,9 +21,13 @@ import java.util.Scanner;
 解释: 无论怎样，你总会到达索引为 3 的位置。但该位置的最大跳跃长度是 0 ， 所以你永远不可能到达最后一个位置。
 
  */
+
+/**
+ * @author hexuehui
+ */
 public class j_1 {
     public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String[] arr=scanner.nextLine().split(",");
         int[] nums=new int[arr.length];
         for (int i=0;i<arr.length;i++)
