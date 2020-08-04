@@ -23,7 +23,7 @@ public class kmp {
         System.out.println(Arrays.toString(calculateMaxMatchLengths("abbaaba")));
 //        System.out.println(Arrays.toString(max_match_pattern("abababzababab")));
         System.out.println(search("abbaavvvabbaaba", "abbaaba"));
-        System.out.println(kmp("abbaavvvabbaaba", "abbaaba"));
+        System.out.println(kmpp("abbaavvvabbaaba", "abbaaba"));
     }
 
     public static int[] max_match_pattern(String pattern) {
@@ -61,7 +61,7 @@ public class kmp {
         return positions;
     }
 
-    public static List<Integer> kmp(String text, String pattern) {
+    public static List<Integer> kmpp(String text, String pattern) {
         List<Integer> position = new ArrayList<>();
         int[] max_match_len = max_match_pattern(pattern);
         int count = 0;
@@ -78,3 +78,5 @@ public class kmp {
         return position;
     }
 }
+
+//
