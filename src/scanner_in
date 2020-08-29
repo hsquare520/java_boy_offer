@@ -1,0 +1,124 @@
+## 每行输入带有空格的数字
+
+**示例输入**
+
+```
+6
+2 1
+3 2
+4 3
+5 2
+6 1
+123456
+public static void main(String[] args) {
+	Scanner in = new Scanner(System.in);
+	int count = Integer.parseInt(in.nextLine())-1;
+	int[][] num = new int[count][2];
+	for(int i=0;i<count;i++){
+	    String temp = in.nextLine();
+	    String[] ss = temp.trim().split(" ");
+	    num[i][0] = Integer.parseInt(ss[0]);
+	    num[i][1] = Integer.parseInt(ss[1]);
+	}
+}
+1234567891011
+```
+
+## 输入带有数字和字符串
+
+**示例输入**
+
+```
+3
+aa
+b
+ac
+bbaac
+12345
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int count = in.nextInt();
+    in.nextLine();
+    String[] strs = new String[count];
+    for(int i=0;i<count;i++){
+        strs[i] = in.nextLine();
+    }
+    String strT = in.nextLine();
+    System.out.println(0);
+}
+1234567891011
+```
+
+## 输入带有数字和符号
+
+**示例输入**
+
+```
+20,3
+1
+public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    String[] line = in.nextLine().split(",");
+    int m = Integer.valueOf(line[0]);
+    int k = Integer.valueOf(line[1]);
+}
+```
+
+
+
+
+
+# 笔试常见输入总结（Java）
+
+```java
+import java.util.Scanner;
+
+public class Main{
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+
+        // 1 输入整型数字 6
+        int n = scanner.nextInt();
+
+
+        // 2 在一行输入n个数字，中间用空格隔开  1 2 3 4 5 6
+        int[] nums = new int[n];
+        while(scanner.hasNext()){
+            for(int i=0; i<n; i++)
+                nums[i] = scanner.nextInt();
+            break;
+        }
+
+
+        // 3 在n行输入n个数字
+        /**
+         * 1
+         * 2
+         * 3
+         * 4
+         * 5
+         * 6
+         */
+        int[] nums2 = new int[n];
+        for(int i=0; i<n; i++)
+            nums2[i] = scanner.nextInt();
+
+
+        // 4 在n行输入n个字符串
+        /**
+         * aaa
+         * bbb
+         * ccc
+         * ddd
+         * eee
+         * fff
+         */
+        String[] strs = new String[n];
+        for(int i=0; i<n; i++)
+            strs[i] = scanner.next();
+
+    }  // end main()
+
+}
