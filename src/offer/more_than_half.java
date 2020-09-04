@@ -1,9 +1,6 @@
 package offer;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class more_than_half {
     private String name;
