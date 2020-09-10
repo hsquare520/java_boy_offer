@@ -7,7 +7,7 @@ public class ali_2 {
         Scanner scanner = new Scanner(System.in);
         int n=scanner.nextInt();
         scanner.nextLine();
-        int[][] arr=new int[n-1][2];
+        int[][] arr=new int[n-1][2  ];
         for (int i=0;i<n-1;i++){
             String temp = scanner.nextLine();
             String[] ss = temp.trim().split(" ");
